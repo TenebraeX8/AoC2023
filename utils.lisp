@@ -5,8 +5,6 @@
 (defun read-lines (nr) (uiop:read-file-lines (format nil "./inputs/~a.inp" nr)))
 (defun read-lines-as-int (nr) (mapcar #'parse-integer (read-lines nr)))
 
-
-
 ;taken from https://stackoverflow.com/questions/4366668/str-replace-in-common-lisp
 (defun string-replace (search replace string &optional count)
   (loop for start = (search search (or result string)

@@ -11,10 +11,10 @@
     (+ (* 10 (digit-char-p (char str 0))) 
        (digit-char-p (char str (- (length str) 1)))))
 
-
 (defun part1 (inp)
     (loop for line in inp
         sum (extract-number (get-numbers-from-string line))))
+
 
 (defun replace-written-numbers (line)
     (string-replace "one" "o1e" 
