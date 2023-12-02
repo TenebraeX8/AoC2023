@@ -11,7 +11,7 @@
     (+ (* 10 (digit-char-p (char str 0))) 
        (digit-char-p (char str (- (length str) 1)))))
 
-(defun part1 (inp)
+(defun day1-part1 (inp)
     (loop for line in inp
         sum (extract-number (get-numbers-from-string line))))
 
@@ -27,9 +27,9 @@
     (string-replace "eight" "e8t"
     (string-replace "nine" "n9e" line))))))))))
 
-(defun part2 (inp)
+(defun day1-part2 (inp)
     (loop for line in inp
         sum (extract-number (get-numbers-from-string (replace-written-numbers line)))))
 
 
-(defun solve-day1 (inp) (format t "----------~%Day1~%----------~%Part 1: ~a~%Part 2: ~a~%" (part1 inp) (part2 inp)))
+(defun solve-day1 (inp) (format t "----------~%Day1~%----------~%Part 1: ~a~%Part 2: ~a~%" (day1-part1 inp) (day1-part2 inp)))
