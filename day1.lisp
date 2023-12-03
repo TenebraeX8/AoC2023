@@ -2,6 +2,7 @@
 (load "utils.lisp")
 (defpackage aoc-2023-day1 (:use :cl :aoc-2023-utils) (:export :solve-day1))
 
+(in-package aoc-2023-day1)
 
 (defun get-numbers-from-string (str)
     (let ((value (remove-if-not #'digit-char-p str)))

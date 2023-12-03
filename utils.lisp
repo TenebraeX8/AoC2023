@@ -1,9 +1,11 @@
 (require :uiop)
 (defpackage aoc-2023-utils (:use :cl)
-    (:export :read-lines :read-lines-as-int :nil-to-zero
+    (:export :read-lines :read-lines-as-int :nil-to-default
              :string-replace :str-split
              :dictionarify :lookup :update :keys-of-dict :values-of-dict
     ))
+
+(in-package aoc-2023-utils)
 
 (defun read-lines (nr) (uiop:read-file-lines (format nil "./inputs/~a.inp" nr)))
 (defun read-lines-as-int (nr) (mapcar #'parse-integer (read-lines nr)))

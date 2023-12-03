@@ -2,6 +2,7 @@
 (load "utils.lisp")
 (defpackage aoc-2023-day2 (:use :cl :aoc-2023-utils) (:export :solve-day2))
 
+(in-package aoc-2023-day2)
 
 (defvar *requirement* nil)
 (setf *requirement* '(("red" . 12) ("green" . 13) ("blue" . 14))) 
