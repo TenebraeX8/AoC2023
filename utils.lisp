@@ -1,7 +1,7 @@
 (require :uiop)
 (defpackage aoc-2023-utils (:use :cl)
     (:export :read-lines :read-lines-as-int :nil-to-default
-             :string-replace :str-split
+             :string-replace :str-split :str-empty
              :dictionarify :lookup :update :keys-of-dict :values-of-dict
     ))
 
@@ -29,7 +29,7 @@
         do (when count (decf count))
         finally (return-from string-replace (or result string))))
 (defun str-split (str sep) (uiop:split-string str :separator sep))
-
+(defun str-empty (str) (< (length str) 1))
 
 ;-------------------------------------------------------------------
 ; Dictionaries (association lists)
